@@ -1,0 +1,37 @@
+#OSX
+*~
+.DS_Store
+#
+# for iOS/Xcode
+# --build file
+build/
+DerivedData
+# --private settings
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+# --default settings
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+# --custom scheme
+xcuserdata
+# --manual deprecated
+*.moved-aside
+# --edited by start Xcode
+*.xcuserstate
+# --VCS metadata
+*.xccheckout
+# --etc
+profile
+*.hmap
+*.ipa
+
+*.pd_darwin
+
+# CocoaPods
+Pods
+*.xcworkspace
+!default.xcworkspace
