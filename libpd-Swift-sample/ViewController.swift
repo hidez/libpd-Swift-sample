@@ -23,6 +23,7 @@ class ViewController: UIViewController, PdListener {
         dispatcher?.addListener(self, forSource: "bang_bang")
         dispatcher?.addListener(self, forSource: "counter")
         PdBase.setDelegate(dispatcher)
+        MyCounter_setup() //external
         let patch: UnsafeMutablePointer = PdBase.openFile("sample.pd", path: NSBundle.mainBundle().resourcePath)
         if patch == nil {
             println("Failed to open patch!")
