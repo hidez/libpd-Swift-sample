@@ -1,5 +1,5 @@
 # libpd-Swift-sample
-This is sample for libpd on Swift.  
+This is test sample for libpd on Swift.  
 This source is named "sample", but it's buggy maybe.  
 Please be care.  
 
