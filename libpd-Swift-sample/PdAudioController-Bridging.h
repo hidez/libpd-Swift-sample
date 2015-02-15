@@ -10,9 +10,9 @@
 #import "PdAudioController.h" //libpd
 
 typedef NS_ENUM(NSInteger, PdAudioControlStatus) {
-	PdAudioControlStatusOK = 0,              // success
-	PdAudioControlStatusError = -1,          // unrecoverable error
-	PdAudioControlStatusPropertyChanged = 1  // some properties have changed to run correctly (not fatal)
+	PdAudioControlStatusOK = PdAudioOK, //success
+	PdAudioControlStatusError = PdAudioError, //unrecoverable error
+	PdAudioControlStatusPropertyChanged = PdAudioPropertyChanged //some properties have changed to run correctly (not fatal)
 };
 
 @interface PdAudioController_Bridging : NSObject

@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let s = PdAudioController_Bridging().configureAmbientWithSampleRate(44100, numberChannels: 2, mixingEnabled: true, audioController: c)
             switch s {
             case .OK:
+                println("success")
                 break //success
             case .Error:
                 println("unrecoverable error: failed to initialize audio components")

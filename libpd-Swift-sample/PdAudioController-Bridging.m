@@ -12,35 +12,14 @@
 
 - (PdAudioControlStatus)configurePlaybackWithSampleRate:(int)sampleRate numberChannels:(int)numChannels inputEnabled:(BOOL)inputEnabled mixingEnabled:(BOOL)mixingEnabled audioController:(PdAudioController *)audioController
 {
-    PdAudioStatus status = [audioController configurePlaybackWithSampleRate:sampleRate numberChannels:numChannels inputEnabled:numChannels mixingEnabled:mixingEnabled];
-    switch (status) {
-        case PdAudioError:
-            return PdAudioControlStatusError;
-            break;
-        case PdAudioPropertyChanged:
-            return PdAudioControlStatusPropertyChanged;
-            break;
-        default:
-            return PdAudioControlStatusOK;
-            break;
-    }
+    PdAudioControlStatus status = (NSInteger)[audioController configurePlaybackWithSampleRate:sampleRate numberChannels:numChannels inputEnabled:numChannels mixingEnabled:mixingEnabled];
+    return status;
 }
 
 - (PdAudioControlStatus)configureAmbientWithSampleRate:(int)sampleRate numberChannels:(int)numChannels mixingEnabled:(BOOL)mixingEnabled audioController:(PdAudioController *)audioController
 {
-    PdAudioStatus status = [audioController configureAmbientWithSampleRate:sampleRate numberChannels:numChannels mixingEnabled:mixingEnabled];
-    switch (status) {
-        case PdAudioError:
-            return PdAudioControlStatusError;
-            break;
-        case PdAudioPropertyChanged:
-            return PdAudioControlStatusPropertyChanged;
-            break;
-        default:
-            return PdAudioControlStatusOK;
-            break;
-    }
-    
+    PdAudioControlStatus status = (NSInteger)[audioController configureAmbientWithSampleRate:sampleRate numberChannels:numChannels mixingEnabled:mixingEnabled];
+    return status;
 }
 
 @end
