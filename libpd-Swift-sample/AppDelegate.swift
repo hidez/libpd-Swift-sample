@@ -19,18 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //libpd
         audioController = PdAudioController()
         if let c = audioController {
-            //let s = PdAudioController_Bridging().configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: true, mixingEnabled: true, audioController: c)
-            let s = PdAudioController_Bridging().configureAmbientWithSampleRate(44100, numberChannels: 2, mixingEnabled: true, audioController: c)
-            switch s {
+            //let s = c.configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: false, mixingEnabled: true).toPdAudioControlStatus()
+            let s = c.configureAmbientWithSampleRate(44100, numberChannels: 2, mixingEnabled: true).toPdAudioControlStatus()
+            switch s{
             case .OK:
                 println("success")
-                break //success
             case .Error:
                 println("unrecoverable error: failed to initialize audio components")
             case .PropertyChanged:
                 println("some properties have changed to run correctly (not fatal)")
-            default:
-                break //do nothing, make compiler happy ;)
             }
         } else {
             println("could not get PdAudioController")
@@ -61,3 +58,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+//MARK: - CONVERT ENUM FOR SWIFT
+
+extension PdAudioStatus {
+    enum PdAudioControlStatus {
+        case OK
+        case Error
+        case PropertyChanged
+    }
+    func toPdAudioControlStatus() -> PdAudioControlStatus {
+        switch self.value {
+        case 0: //
+            return .OK
+        case -1: //
+            return .Error
+        default: //
+            return .PropertyChanged
+        }
+    }
+}

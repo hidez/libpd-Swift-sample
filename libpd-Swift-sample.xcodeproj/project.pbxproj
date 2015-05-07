@@ -13,7 +13,6 @@
 		EC2AC1741A7D0F5C00CF3EC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2AC1721A7D0F5C00CF3EC8 /* Main.storyboard */; };
 		EC2AC1761A7D0F5C00CF3EC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2AC1751A7D0F5C00CF3EC8 /* Images.xcassets */; };
 		EC2AC1851A7D0F5D00CF3EC8 /* libpd_Swift_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AC1841A7D0F5D00CF3EC8 /* libpd_Swift_sampleTests.swift */; };
-		EC42D8F41A7D196A001E25AD /* PdAudioController-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42D8F31A7D196A001E25AD /* PdAudioController-Bridging.m */; };
 		EC42D8F71A7D19EB001E25AD /* sample.pd in Resources */ = {isa = PBXBuildFile; fileRef = EC42D8F61A7D19EB001E25AD /* sample.pd */; };
 		ECBE8C7A1A7E6C6B0086099F /* MyCounter.c in Sources */ = {isa = PBXBuildFile; fileRef = ECBE8C781A7E6C6B0086099F /* MyCounter.c */; };
 /* End PBXBuildFile section */
@@ -42,8 +41,6 @@
 		EC2AC1831A7D0F5D00CF3EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2AC1841A7D0F5D00CF3EC8 /* libpd_Swift_sampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libpd_Swift_sampleTests.swift; sourceTree = "<group>"; };
 		EC42D8EF1A7D1935001E25AD /* libpd-Swift-sample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libpd-Swift-sample-Bridging-Header.h"; sourceTree = "<group>"; };
-		EC42D8F21A7D196A001E25AD /* PdAudioController-Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PdAudioController-Bridging.h"; sourceTree = "<group>"; };
-		EC42D8F31A7D196A001E25AD /* PdAudioController-Bridging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PdAudioController-Bridging.m"; sourceTree = "<group>"; };
 		EC42D8F61A7D19EB001E25AD /* sample.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.pd; sourceTree = "<group>"; };
 		ECBE8C781A7E6C6B0086099F /* MyCounter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyCounter.c; sourceTree = "<group>"; };
 		ECBE8C791A7E6C6B0086099F /* MyCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCounter.h; sourceTree = "<group>"; };
@@ -111,8 +108,6 @@
 				EC2AC16E1A7D0F5C00CF3EC8 /* AppDelegate.swift */,
 				EC2AC1701A7D0F5C00CF3EC8 /* ViewController.swift */,
 				EC42D8EF1A7D1935001E25AD /* libpd-Swift-sample-Bridging-Header.h */,
-				EC42D8F21A7D196A001E25AD /* PdAudioController-Bridging.h */,
-				EC42D8F31A7D196A001E25AD /* PdAudioController-Bridging.m */,
 				ECBE8C791A7E6C6B0086099F /* MyCounter.h */,
 				ECBE8C781A7E6C6B0086099F /* MyCounter.c */,
 				EC2AC1721A7D0F5C00CF3EC8 /* Main.storyboard */,
@@ -291,7 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC42D8F41A7D196A001E25AD /* PdAudioController-Bridging.m in Sources */,
 				EC2AC1711A7D0F5C00CF3EC8 /* ViewController.swift in Sources */,
 				ECBE8C7A1A7E6C6B0086099F /* MyCounter.c in Sources */,
 				EC2AC16F1A7D0F5C00CF3EC8 /* AppDelegate.swift in Sources */,

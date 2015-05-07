@@ -4,5 +4,4 @@
 
 #import "PdAudioController.h"
 #import "PdDispatcher.h"
-#import "PdAudioController-Bridging.h"
 #import "MyCounter.h"
