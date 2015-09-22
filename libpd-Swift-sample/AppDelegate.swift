@@ -23,14 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let s = c.configureAmbientWithSampleRate(44100, numberChannels: 2, mixingEnabled: true).toPdAudioControlStatus()
             switch s{
             case .OK:
-                println("success")
+                print("success")
             case .Error:
-                println("unrecoverable error: failed to initialize audio components")
+                print("unrecoverable error: failed to initialize audio components")
             case .PropertyChanged:
-                println("some properties have changed to run correctly (not fatal)")
+                print("some properties have changed to run correctly (not fatal)")
             }
         } else {
-            println("could not get PdAudioController")
+            print("could not get PdAudioController")
         }
         
         return true
@@ -67,7 +67,7 @@ extension PdAudioStatus {
         case PropertyChanged
     }
     func toPdAudioControlStatus() -> PdAudioControlStatus {
-        switch self.value {
+        switch self.rawValue {
         case 0: //
             return .OK
         case -1: //
