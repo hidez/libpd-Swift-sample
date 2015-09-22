@@ -26,7 +26,7 @@ class ViewController: UIViewController, PdListener {
         MyCounter_setup() //external
         let patch: UnsafeMutablePointer = PdBase.openFile("sample.pd", path: NSBundle.mainBundle().resourcePath)
         if patch == nil {
-            println("Failed to open patch!")
+            print("Failed to open patch!")
             // Gracefully handle failure...
         }
     }
@@ -57,7 +57,7 @@ class ViewController: UIViewController, PdListener {
 
     func receiveBangFromSource(source: String!) {
         if source == "bang_bang" {
-            println("receive bang!")
+            print("receive bang!")
         }
     }
 
