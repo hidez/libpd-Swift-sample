@@ -14,6 +14,8 @@
 		EC2AC1761A7D0F5C00CF3EC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2AC1751A7D0F5C00CF3EC8 /* Images.xcassets */; };
 		EC2AC1851A7D0F5D00CF3EC8 /* libpd_Swift_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AC1841A7D0F5D00CF3EC8 /* libpd_Swift_sampleTests.swift */; };
 		EC42D8F71A7D19EB001E25AD /* sample.pd in Resources */ = {isa = PBXBuildFile; fileRef = EC42D8F61A7D19EB001E25AD /* sample.pd */; };
+		ECA165471BC599D60060F585 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECA165461BC599D60060F585 /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
+		ECA165491BC59C290060F585 /* ConstantValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA165481BC59C290060F585 /* ConstantValues.swift */; settings = {ASSET_TAGS = (); }; };
 		ECBE8C7A1A7E6C6B0086099F /* MyCounter.c in Sources */ = {isa = PBXBuildFile; fileRef = ECBE8C781A7E6C6B0086099F /* MyCounter.c */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		EC2AC1841A7D0F5D00CF3EC8 /* libpd_Swift_sampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libpd_Swift_sampleTests.swift; sourceTree = "<group>"; };
 		EC42D8EF1A7D1935001E25AD /* libpd-Swift-sample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libpd-Swift-sample-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC42D8F61A7D19EB001E25AD /* sample.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.pd; sourceTree = "<group>"; };
+		ECA165461BC599D60060F585 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		ECA165481BC59C290060F585 /* ConstantValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantValues.swift; sourceTree = "<group>"; };
 		ECBE8C781A7E6C6B0086099F /* MyCounter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyCounter.c; sourceTree = "<group>"; };
 		ECBE8C791A7E6C6B0086099F /* MyCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCounter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +89,7 @@
 		EC2AC1601A7D0F5C00CF3EC8 = {
 			isa = PBXGroup;
 			children = (
+				ECA165461BC599D60060F585 /* Settings.bundle */,
 				EC2AC16B1A7D0F5C00CF3EC8 /* libpd-Swift-sample */,
 				EC2AC1811A7D0F5D00CF3EC8 /* libpd-Swift-sampleTests */,
 				EC2AC16A1A7D0F5C00CF3EC8 /* Products */,
@@ -105,6 +110,7 @@
 		EC2AC16B1A7D0F5C00CF3EC8 /* libpd-Swift-sample */ = {
 			isa = PBXGroup;
 			children = (
+				ECA165481BC59C290060F585 /* ConstantValues.swift */,
 				EC2AC16E1A7D0F5C00CF3EC8 /* AppDelegate.swift */,
 				EC2AC1701A7D0F5C00CF3EC8 /* ViewController.swift */,
 				EC42D8EF1A7D1935001E25AD /* libpd-Swift-sample-Bridging-Header.h */,
@@ -235,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA165471BC599D60060F585 /* Settings.bundle in Resources */,
 				EC2AC1741A7D0F5C00CF3EC8 /* Main.storyboard in Resources */,
 				EC42D8F71A7D19EB001E25AD /* sample.pd in Resources */,
 				EC2AC1761A7D0F5C00CF3EC8 /* Images.xcassets in Resources */,
@@ -289,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC2AC1711A7D0F5C00CF3EC8 /* ViewController.swift in Sources */,
+				ECA165491BC59C290060F585 /* ConstantValues.swift in Sources */,
 				ECBE8C7A1A7E6C6B0086099F /* MyCounter.c in Sources */,
 				EC2AC16F1A7D0F5C00CF3EC8 /* AppDelegate.swift in Sources */,
 			);

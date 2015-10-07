@@ -18,6 +18,13 @@ class ViewController: UIViewController, PdListener {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let v = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String //バージョン番号
+        let b = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String //ビルド番号
+        let d = NSUserDefaults.standardUserDefaults()
+        d.setObject(v, forKey: ConstantValues.kUserDefaultSettingsBundleVersion) //バージョン番号
+        d.setObject(b, forKey: ConstantValues.kUserDefaultSettingsBundleBuild) //ビルド番号
+        d.synchronize()
+        
         //libpd
         dispatcher = PdDispatcher()
         dispatcher?.addListener(self, forSource: "bang_bang")
