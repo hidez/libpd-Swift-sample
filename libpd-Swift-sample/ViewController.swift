@@ -3,7 +3,7 @@
 //  libpd-Swift-sample
 //
 //  Created by Hidehisa YOKOYAMA on 2015/01/31.
-//  Copyright (c) 2015年 Hidehisa YOKOYAMA. All rights reserved.
+//  Copyright (c) 2015 Hidehisa YOKOYAMA. All rights reserved.
 //
 
 import UIKit

@@ -3,7 +3,7 @@
 //  libpd-Swift-sample
 //
 //  Created by Hidehisa YOKOYAMA on 2015/10/08.
-//  Copyright © 2015年 Hidehisa YOKOYAMA. All rights reserved.
+//  Copyright © 2015 Hidehisa YOKOYAMA. All rights reserved.
 //
 
 import Foundation
