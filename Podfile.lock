@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   libpd:
-    :commit: b646b1209d7e8b9eb8e5d21c6b3c94b07fcb3b2e
+    :commit: e733fa10b769bacab3d695e3ab215c74f7c79173
     :git: https://github.com/libpd/libpd
 
 SPEC CHECKSUMS:
