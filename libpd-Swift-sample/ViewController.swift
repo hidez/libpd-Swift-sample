@@ -18,31 +18,30 @@ class ViewController: UIViewController, PdListener {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let v = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String //バージョン番号
-        let b = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String //ビルド番号
-        let d = NSUserDefaults.standardUserDefaults()
-        d.setObject(v, forKey: ConstantValues.kUserDefaultSettingsBundleVersion) //バージョン番号
-        d.setObject(b, forKey: ConstantValues.kUserDefaultSettingsBundleBuild) //ビルド番号
+        let v = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String //バージョン番号
+        let b = Bundle.main.infoDictionary?["CFBundleVersion"] as? String //ビルド番号
+        let d = UserDefaults.standard
+        d.set(v, forKey: ConstantValues.kUserDefaultSettingsBundleVersion) //バージョン番号
+        d.set(b, forKey: ConstantValues.kUserDefaultSettingsBundleBuild) //ビルド番号
         d.synchronize()
         
         //libpd
         dispatcher = PdDispatcher()
-        dispatcher?.addListener(self, forSource: "bang_bang")
-        dispatcher?.addListener(self, forSource: "counter")
+        dispatcher?.add(self, forSource: "bang_bang")
+        dispatcher?.add(self, forSource: "counter")
         PdBase.setDelegate(dispatcher)
         MyCounter_setup() //external
-        let patch: UnsafeMutablePointer = PdBase.openFile("sample.pd", path: NSBundle.mainBundle().resourcePath)
-        if patch == nil {
+        
+        if PdBase.openFile("sample.pd", path: Bundle.main.resourcePath) == nil {
             print("Failed to open patch!")
-            // Gracefully handle failure...
         }
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         self.labelCounter.text = "0"
-        PdBase.sendBangToReceiver("tuning_fork_off") //libpd
+        PdBase.sendBang(toReceiver: "tuning_fork_off") //libpd
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,23 +51,23 @@ class ViewController: UIViewController, PdListener {
 
 //MARK: - ACTION EVENT METHOD
     
-    @IBAction func buttonOnPressed(sender: AnyObject) {
-        PdBase.sendBangToReceiver("tuning_fork_on") //libpd
+    @IBAction func buttonOnPressed(_ sender: AnyObject) {
+        PdBase.sendBang(toReceiver: "tuning_fork_on") //libpd
     }
 
-    @IBAction func buttonOffPressed(sender: AnyObject) {
-        PdBase.sendBangToReceiver("tuning_fork_off") //libpd
+    @IBAction func buttonOffPressed(_ sender: AnyObject) {
+        PdBase.sendBang(toReceiver: "tuning_fork_off") //libpd
     }
     
 //MARK: - PdListener CALLBACK
 
-    func receiveBangFromSource(source: String!) {
+    func receiveBang(fromSource source: String!) {
         if source == "bang_bang" {
             print("receive bang!")
         }
     }
-
-    func receiveFloat(received: Float, fromSource source: String!) {
+    
+    func receive(_ received: Float, fromSource source: String!) {
         if source == "counter" {
             self.labelCounter.text = "\(Int(received))"
         }
