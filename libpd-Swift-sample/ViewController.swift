@@ -13,7 +13,7 @@ class ViewController: UIViewController, PdListener {
 
     @IBOutlet weak var labelCounter: UILabel!
     
-//MARK: - LIFE CYCLE OF VIEW CONTROLLER METHOD
+    // MARK: - LIFE CYCLE OF VIEW CONTROLLER METHOD
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ class ViewController: UIViewController, PdListener {
         // Dispose of any resources that can be recreated.
     }
 
-//MARK: - ACTION EVENT METHOD
+    // MARK: - ACTION EVENT METHOD
     
     @IBAction func buttonOnPressed(_ sender: AnyObject) {
         PdBase.sendBang(toReceiver: "tuning_fork_on") //libpd
@@ -59,7 +59,7 @@ class ViewController: UIViewController, PdListener {
         PdBase.sendBang(toReceiver: "tuning_fork_off") //libpd
     }
     
-//MARK: - PdListener CALLBACK
+    // MARK: - PdListener CALLBACK
 
     func receiveBang(fromSource source: String!) {
         if source == "bang_bang" {
@@ -73,4 +73,3 @@ class ViewController: UIViewController, PdListener {
         }
     }
 }
-

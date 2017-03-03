@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let c = audioController {
             //let s = c.configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: false, mixingEnabled: true).toPdAudioControlStatus()
             let s = c.configureAmbient(withSampleRate: 44100, numberChannels: 2, mixingEnabled: true).toPdAudioControlStatus()
-            switch s{
+            switch s {
             case .OK:
                 print("success")
             case .Error:
@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-//MARK: - CONVERT ENUM FOR SWIFT
+// MARK: - CONVERT ENUM FOR SWIFT
 
 extension PdAudioStatus {
     enum PdAudioControlStatus {
