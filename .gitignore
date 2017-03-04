@@ -35,5 +35,3 @@ profile
 Pods
 *.xcworkspace
 !default.xcworkspace
-#Swift Lint$
-.swiftlint.yml
