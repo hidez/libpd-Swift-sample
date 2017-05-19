@@ -22,11 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //let s = c.configurePlaybackWithSampleRate(44100, numberChannels: 2, inputEnabled: false, mixingEnabled: true).toPdAudioControlStatus()
             let s = c.configureAmbient(withSampleRate: 44100, numberChannels: 2, mixingEnabled: true).toPdAudioControlStatus()
             switch s {
-            case .OK:
+            case .ok:
                 print("success")
-            case .Error:
+            case .error:
                 print("unrecoverable error: failed to initialize audio components")
-            case .PropertyChanged:
+            case .propertyChanged:
                 print("some properties have changed to run correctly (not fatal)")
             }
         } else {
@@ -62,18 +62,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension PdAudioStatus {
     enum PdAudioControlStatus {
-        case OK
-        case Error
-        case PropertyChanged
+        case ok
+        case error
+        case propertyChanged
     }
     func toPdAudioControlStatus() -> PdAudioControlStatus {
         switch self.rawValue {
         case 0: //
-            return .OK
+            return .ok
         case -1: //
-            return .Error
+            return .error
         default: //
-            return .PropertyChanged
+            return .propertyChanged
         }
     }
 }
