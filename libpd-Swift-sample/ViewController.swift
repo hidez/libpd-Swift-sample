@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import libpd
 
 class ViewController: UIViewController, PdListener {
     var dispatcher: PdDispatcher?

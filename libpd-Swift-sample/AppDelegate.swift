@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import libpd
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

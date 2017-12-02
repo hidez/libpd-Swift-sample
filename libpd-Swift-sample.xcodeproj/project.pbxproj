@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77B3359445ED9556F690A96C /* libPods-libpd-Swift-sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9241C908C398F3F721614A40 /* libPods-libpd-Swift-sample.a */; };
+		5F353438E2F487BD7D2E0ED8 /* Pods_libpd_Swift_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08974EC49F54E2973368BD44 /* Pods_libpd_Swift_sample.framework */; };
 		EC2AC16F1A7D0F5C00CF3EC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AC16E1A7D0F5C00CF3EC8 /* AppDelegate.swift */; };
 		EC2AC1711A7D0F5C00CF3EC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AC1701A7D0F5C00CF3EC8 /* ViewController.swift */; };
 		EC2AC1741A7D0F5C00CF3EC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2AC1721A7D0F5C00CF3EC8 /* Main.storyboard */; };
@@ -30,8 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08974EC49F54E2973368BD44 /* Pods_libpd_Swift_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libpd_Swift_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BB75BBF5555E129E42378A /* Pods-libpd-Swift-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libpd-Swift-sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample.release.xcconfig"; sourceTree = "<group>"; };
-		9241C908C398F3F721614A40 /* libPods-libpd-Swift-sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-libpd-Swift-sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25C29D6D0C97713C9DB2DAF /* Pods-libpd-Swift-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libpd-Swift-sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample.debug.xcconfig"; sourceTree = "<group>"; };
 		EC2AC1691A7D0F5C00CF3EC8 /* libpd-Swift-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "libpd-Swift-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2AC16D1A7D0F5C00CF3EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B3359445ED9556F690A96C /* libPods-libpd-Swift-sample.a in Frameworks */,
+				5F353438E2F487BD7D2E0ED8 /* Pods_libpd_Swift_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +72,7 @@
 		ABA084BAFF07769EFE0786E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9241C908C398F3F721614A40 /* libPods-libpd-Swift-sample.a */,
+				08974EC49F54E2973368BD44 /* Pods_libpd_Swift_sample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,17 +207,17 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Hidehisa YOKOYAMA";
 				TargetAttributes = {
 					EC2AC1681A7D0F5C00CF3EC8 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = U29G7GS2GP;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 					};
 					EC2AC17D1A7D0F5D00CF3EC8 = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 						TestTargetID = EC2AC1681A7D0F5C00CF3EC8;
 					};
 				};
@@ -269,9 +269,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/libpd/libpd.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libpd.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -299,13 +302,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-libpd-Swift-sample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC79E9E61E69EE1F00DC98F0 /* ShellScript */ = {
@@ -373,14 +379,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -403,6 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,14 +433,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -443,6 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -461,6 +481,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = U29G7GS2GP;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/**";
 				INFOPLIST_FILE = "libpd-Swift-sample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -468,7 +489,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "libpd-Swift-sample/libpd-Swift-sample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -481,18 +504,22 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = U29G7GS2GP;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/**";
 				INFOPLIST_FILE = "libpd-Swift-sample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = foo.bar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "libpd-Swift-sample/libpd-Swift-sample-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
 		EC2AC18C1A7D0F5D00CF3EC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25C29D6D0C97713C9DB2DAF /* Pods-libpd-Swift-sample.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -504,13 +531,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.blowbend.ios.sample.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libpd-Swift-sample.app/libpd-Swift-sample";
 			};
 			name = Debug;
 		};
 		EC2AC18D1A7D0F5D00CF3EC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46BB75BBF5555E129E42378A /* Pods-libpd-Swift-sample.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -518,7 +547,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.blowbend.ios.sample.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libpd-Swift-sample.app/libpd-Swift-sample";
 			};
 			name = Release;
