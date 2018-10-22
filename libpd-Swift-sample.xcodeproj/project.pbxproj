@@ -31,8 +31,7 @@
 
 /* Begin PBXFileReference section */
 		08974EC49F54E2973368BD44 /* Pods_libpd_Swift_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libpd_Swift_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46BB75BBF5555E129E42378A /* Pods-libpd-Swift-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libpd-Swift-sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample.release.xcconfig"; sourceTree = "<group>"; };
-		C25C29D6D0C97713C9DB2DAF /* Pods-libpd-Swift-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libpd-Swift-sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample.debug.xcconfig"; sourceTree = "<group>"; };
+		BB992DF9D91E6AFE852F389E /* Pods-libpd-Swift-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libpd-Swift-sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample.release.xcconfig"; sourceTree = "<group>"; };
 		EC2AC1691A7D0F5C00CF3EC8 /* libpd-Swift-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "libpd-Swift-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2AC16D1A7D0F5C00CF3EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2AC16E1A7D0F5C00CF3EC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		ECA165481BC59C290060F585 /* ConstantValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantValues.swift; sourceTree = "<group>"; };
 		ECBE8C781A7E6C6B0086099F /* MyCounter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyCounter.c; sourceTree = "<group>"; };
 		ECBE8C791A7E6C6B0086099F /* MyCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCounter.h; sourceTree = "<group>"; };
+		F1DAAD528B1A7AB5016C898D /* Pods-libpd-Swift-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libpd-Swift-sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +151,8 @@
 		F01B9525E4B119B0A9556233 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C25C29D6D0C97713C9DB2DAF /* Pods-libpd-Swift-sample.debug.xcconfig */,
-				46BB75BBF5555E129E42378A /* Pods-libpd-Swift-sample.release.xcconfig */,
+				F1DAAD528B1A7AB5016C898D /* Pods-libpd-Swift-sample.debug.xcconfig */,
+				BB992DF9D91E6AFE852F389E /* Pods-libpd-Swift-sample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -169,7 +169,6 @@
 				EC2AC1661A7D0F5C00CF3EC8 /* Frameworks */,
 				EC2AC1671A7D0F5C00CF3EC8 /* Resources */,
 				19A7786258DAB905E1646581 /* [CP] Embed Pods Frameworks */,
-				1A13583C1E5FCA6DDC7CB0D6 /* [CP] Copy Pods Resources */,
 				EC79E9E61E69EE1F00DC98F0 /* ShellScript */,
 			);
 			buildRules = (
@@ -279,21 +278,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1A13583C1E5FCA6DDC7CB0D6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B5B76D8F390683C2BB478196 /* [CP] Check Pods Manifest.lock */ = {
@@ -478,7 +462,7 @@
 		};
 		EC2AC1891A7D0F5D00CF3EC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C25C29D6D0C97713C9DB2DAF /* Pods-libpd-Swift-sample.debug.xcconfig */;
+			baseConfigurationReference = F1DAAD528B1A7AB5016C898D /* Pods-libpd-Swift-sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -501,7 +485,7 @@
 		};
 		EC2AC18A1A7D0F5D00CF3EC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46BB75BBF5555E129E42378A /* Pods-libpd-Swift-sample.release.xcconfig */;
+			baseConfigurationReference = BB992DF9D91E6AFE852F389E /* Pods-libpd-Swift-sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -523,7 +507,6 @@
 		};
 		EC2AC18C1A7D0F5D00CF3EC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C25C29D6D0C97713C9DB2DAF /* Pods-libpd-Swift-sample.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -543,7 +526,6 @@
 		};
 		EC2AC18D1A7D0F5D00CF3EC8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46BB75BBF5555E129E42378A /* Pods-libpd-Swift-sample.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
