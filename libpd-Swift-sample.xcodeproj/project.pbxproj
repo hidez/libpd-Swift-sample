@@ -206,24 +206,24 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Hidehisa YOKOYAMA";
 				TargetAttributes = {
 					EC2AC1681A7D0F5C00CF3EC8 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = U29G7GS2GP;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1020;
 					};
 					EC2AC17D1A7D0F5D00CF3EC8 = {
 						CreatedOnToolsVersion = 6.1.1;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = 1020;
 						TestTargetID = EC2AC1681A7D0F5C00CF3EC8;
 					};
 				};
 			};
 			buildConfigurationList = EC2AC1641A7D0F5C00CF3EC8 /* Build configuration list for PBXProject "libpd-Swift-sample" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -268,7 +268,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/libpd/libpd.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -277,7 +277,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-libpd-Swift-sample/Pods-libpd-Swift-sample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B5B76D8F390683C2BB478196 /* [CP] Check Pods Manifest.lock */ = {
@@ -359,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -415,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -469,7 +471,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = U29G7GS2GP;
-				HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/**";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/Pods/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "libpd-Swift-sample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -477,8 +482,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "libpd-Swift-sample/libpd-Swift-sample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -492,15 +496,17 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = U29G7GS2GP;
-				HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/**";
+				HEADER_SEARCH_PATHS = (
+					"${SRCROOT}/Pods/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "libpd-Swift-sample/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = foo.bar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "libpd-Swift-sample/libpd-Swift-sample-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;

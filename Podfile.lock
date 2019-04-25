@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   libpd:
-    :commit: 5eb0c4a0080d48fa4ff1b93e82200f2d835da637
+    :commit: 419011fa148151dc772f2c8419d7c46cdd980be8
     :git: https://github.com/libpd/libpd
     :submodules: true
 
@@ -20,4 +20,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1c5ff984595a4b42722db857a14a390f5ecaf395
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0
